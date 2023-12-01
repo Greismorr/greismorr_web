@@ -1,6 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../../../domain/model/assets_precacher.dart';
 
 class AnimatedBackgroundWidget extends StatefulWidget {
   const AnimatedBackgroundWidget({
@@ -14,17 +17,15 @@ class AnimatedBackgroundWidget extends StatefulWidget {
 
 class _AnimatedBackgroundWidgetState extends State<AnimatedBackgroundWidget> {
   late final ValueNotifier<String> notifier;
-  final List<String> gradientMeshes = [
-    'assets/images/mesh_gradient/mesh_gradient_step_1.png',
-    'assets/images/mesh_gradient/mesh_gradient_step_2.png',
-    'assets/images/mesh_gradient/mesh_gradient_step_3.png',
-  ];
+  late final List<String> gradientMeshes;
   late final Timer periodicTimer;
   int currentIndex = 0;
 
   @override
   void initState() {
     super.initState();
+
+    gradientMeshes = context.read<AssetsPrecacher>().meshGradientAssets;
 
     notifier = ValueNotifier(
       gradientMeshes.first,

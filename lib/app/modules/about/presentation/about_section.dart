@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
+import 'package:greismorr_web/app/domain/model/assets_precacher.dart';
 import 'package:greismorr_web/app/modules/about/presentation/widgets/animated_circular_widget.dart';
 import 'package:greismorr_web/core/utils/theme/custom_text_styles.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../core/utils/theme/custom_colors.dart';
 import 'widgets/animated_waving_hand_widget.dart';
@@ -67,12 +69,12 @@ class AboutSection extends StatelessWidget {
                 child: Container(
                   width: 230,
                   height: 235,
-                  foregroundDecoration: const BoxDecoration(
+                  foregroundDecoration: BoxDecoration(
                     shape: BoxShape.circle,
                     gradient: CustomColors.pinkToBlueGradient,
                     image: DecorationImage(
                       image: AssetImage(
-                        'assets/images/about/dev_picture.jpg',
+                        context.read<AssetsPrecacher>().devPictureAsset,
                       ),
                       fit: BoxFit.cover,
                     ),
