@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:greismorr_web/app/domain/model/assets_precacher.dart';
 import 'package:provider/provider.dart';
 
+import '../../domain/model/assets_precacher.dart';
 import '../../modules/about/presentation/about_section.dart';
 import '../../modules/about/presentation/widgets/animated_background_widget.dart';
 import '../../modules/projects/presentation/projects_section.dart';

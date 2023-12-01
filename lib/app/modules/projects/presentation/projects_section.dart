@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
-import 'package:greismorr_web/app/modules/projects/presentation/widgets/project_widget.dart';
-import 'package:greismorr_web/core/utils/theme/custom_text_styles.dart';
-import 'package:greismorr_web/core/widgets/gradient_text.dart';
+import 'widgets/project_widget.dart';
+import '../../../../core/utils/theme/custom_text_styles.dart';
+import '../../../../core/widgets/gradient_text.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../core/widgets/gradient_icon.dart';
 import '../domain/project_data.dart';
 
 class ProjectsSection extends StatelessWidget {
@@ -19,14 +20,35 @@ class ProjectsSection extends StatelessWidget {
       height: size.height,
       child: Column(
         children: [
-          GradientText(
-            text: Text(
-              FlutterI18n.translate(
-                context,
-                'projects.sectionTitle',
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 16,
+                ),
+                child: GradientText(
+                  text: Text(
+                    FlutterI18n.translate(
+                      context,
+                      'projects.sectionTitle',
+                    ),
+                    style: CustomTextStyles.section,
+                  ),
+                ),
               ),
-              style: CustomTextStyles.section,
-            ),
+              Tooltip(
+                message: FlutterI18n.translate(
+                  context,
+                  'projects.helperText',
+                ),
+                child: const GradientIcon(
+                  icon: Icon(
+                    Icons.info,
+                  ),
+                ),
+              ),
+            ],
           ),
           Flexible(
             child: ListView.separated(

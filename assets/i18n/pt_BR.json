@@ -11,7 +11,8 @@
         "sectionTitle": "Experiências"
     },   
      "projects": {
-        "sectionTitle": "Projetos"
+        "sectionTitle": "Projetos",
+        "helperText": "Os projetos desta seção não incluem as experiências no mercado tradicional"
     },    
     "skills": {
         "sectionTitle": "Habilidades"

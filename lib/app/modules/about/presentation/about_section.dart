@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
-import 'package:greismorr_web/app/domain/model/assets_precacher.dart';
-import 'package:greismorr_web/app/modules/about/presentation/widgets/animated_circular_widget.dart';
-import 'package:greismorr_web/core/utils/theme/custom_text_styles.dart';
+import '../../../domain/model/assets_precacher.dart';
+import 'widgets/animated_circular_widget.dart';
+import '../../../../core/utils/theme/custom_text_styles.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/utils/theme/custom_colors.dart';
