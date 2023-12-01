@@ -24,9 +24,33 @@ class CustomTextStyles {
     color: fontColor,
   );
 
+  static final section = GoogleFonts.montserrat(
+    fontSize: 32,
+    fontWeight: FontWeight.bold,
+    color: fontColor,
+  );
+
   static final circularText = GoogleFonts.roboto(
     fontSize: 12,
     fontWeight: FontWeight.w500,
     color: Colors.white,
+  );
+
+  static final chip = GoogleFonts.inter(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: CustomColors.pinkDark,
+  );
+
+  static final h3 = GoogleFonts.inter(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: CustomColors.gray900,
+  );
+
+  static final h4 = GoogleFonts.montserrat(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: CustomColors.gray700,
   );
 }

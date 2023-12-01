@@ -60,7 +60,7 @@ class _AnimatedCircularWidgetState extends State<AnimatedCircularWidget>
                     text: Text(
                       FlutterI18n.translate(
                         context,
-                        'aboutMe.devName',
+                        'devName',
                       ),
                       style: CustomTextStyles.circularText,
                     ),

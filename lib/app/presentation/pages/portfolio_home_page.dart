@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:greismorr_web/app/domain/model/assets_precacher.dart';
+import 'package:provider/provider.dart';
 
-import '../../modules/about/presentation/about_section_widget.dart';
+import '../../modules/about/presentation/about_section.dart';
+import '../../modules/about/presentation/widgets/animated_background_widget.dart';
+import '../../modules/projects/presentation/projects_section.dart';
 import 'widgets/appbar_widget.dart';
 
 class PortfolioHomePage extends StatefulWidget {
@@ -15,13 +18,11 @@ class PortfolioHomePage extends StatefulWidget {
 }
 
 class _PortfolioHomePageState extends State<PortfolioHomePage> {
-  final assetsPrecacher = AssetsPrecacher();
-
   @override
   void didChangeDependencies() {
-    assetsPrecacher.preCacheAllAssets(context).then(
-      (_) => FlutterNativeSplash.remove(),
-    );
+    context.read<AssetsPrecacher>().preCacheAllAssets(context).then(
+          (_) => FlutterNativeSplash.remove(),
+        );
 
     super.didChangeDependencies();
   }
@@ -38,12 +39,18 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
         ),
         child: AppbarWidget(),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            AboutSectionWidget(),
-          ],
-        ),
+      body: Stack(
+        children: [
+          AnimatedBackgroundWidget(),
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                AboutSection(),
+                ProjectsSection(),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

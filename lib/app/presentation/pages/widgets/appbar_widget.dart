@@ -26,9 +26,15 @@ class _AppbarWidgetState extends State<AppbarWidget> {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text(
-            'Gabriel dos Reis',
-            style: CustomTextStyles.menuOptions,
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              FlutterI18n.translate(
+                context,
+                'devName',
+              ),
+              style: CustomTextStyles.menuOptions,
+            ),
           ),
           Row(
             children: List.generate(

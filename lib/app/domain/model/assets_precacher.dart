@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 
 class AssetsPrecacher {
-  final List _assets = [
-    'assets/images/about/dev_picture.jpg',
-    'assets/images/mesh_gradient/mesh_gradient_step_1.png',
-    'assets/images/mesh_gradient/mesh_gradient_step_2.png',
-    'assets/images/mesh_gradient/mesh_gradient_step_3.png'
-  ];
+  late final String devPictureAsset ;
+  late final List<String> meshGradientAssets;
+  late final List<String> projectsAssets;
+
+  AssetsPrecacher({
+    required this.devPictureAsset,
+    required this.meshGradientAssets,
+    required this.projectsAssets,
+  });
 
   Future<void> preCacheAllAssets(BuildContext context) async {
     await Future.wait(
-      _assets
+      [
+        devPictureAsset,
+        ...meshGradientAssets,
+        ...projectsAssets,
+      ]
           .map(
             (asset) => precacheImage(
                 AssetImage(
