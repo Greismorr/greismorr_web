@@ -15,9 +15,9 @@ class AnimatedBackgroundWidget extends StatefulWidget {
 class _AnimatedBackgroundWidgetState extends State<AnimatedBackgroundWidget> {
   late final ValueNotifier<String> notifier;
   final List<String> gradientMeshes = [
-    'images/mesh_gradient/mesh_gradient_step_1.png',
-    'images/mesh_gradient/mesh_gradient_step_2.png',
-    'images/mesh_gradient/mesh_gradient_step_3.png',
+    'assets/images/mesh_gradient/mesh_gradient_step_1.png',
+    'assets/images/mesh_gradient/mesh_gradient_step_2.png',
+    'assets/images/mesh_gradient/mesh_gradient_step_3.png',
   ];
   late final Timer periodicTimer;
   int currentIndex = 0;

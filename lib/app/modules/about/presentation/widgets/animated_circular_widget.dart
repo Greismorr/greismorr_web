@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_circular_text/circular_text/model.dart';
 import 'package:flutter_circular_text/circular_text/widget.dart';
+import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/utils/theme/custom_colors.dart';
@@ -57,7 +58,10 @@ class _AnimatedCircularWidgetState extends State<AnimatedCircularWidget>
                 children: [
                   TextItem(
                     text: Text(
-                      "Gabriel dos Reis",
+                      FlutterI18n.translate(
+                        context,
+                        'aboutMe.devName',
+                      ),
                       style: CustomTextStyles.circularText,
                     ),
                     space: 8,
@@ -67,7 +71,10 @@ class _AnimatedCircularWidgetState extends State<AnimatedCircularWidget>
                   ),
                   TextItem(
                     text: Text(
-                      "Desenvolvedor Mobile",
+                      FlutterI18n.translate(
+                        context,
+                        'aboutMe.devTitle',
+                      ),
                       style: CustomTextStyles.circularText,
                     ),
                     space: 10,

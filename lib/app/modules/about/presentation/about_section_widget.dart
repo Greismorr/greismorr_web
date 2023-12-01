@@ -37,14 +37,17 @@ class AboutSectionWidget extends StatelessWidget {
                         )}, ',
                         style: CustomTextStyles.title,
                       ),
-                      AnimatedWavingHandWidget(),
+                      const AnimatedWavingHandWidget(),
                     ],
                   ),
                   Text(
-                    FlutterI18n.translate(
+                    '${FlutterI18n.translate(
                       context,
                       'aboutMe.iAmDev',
-                    ),
+                    )} ${FlutterI18n.translate(
+                      context,
+                      'aboutMe.devName',
+                    )}',
                     style: CustomTextStyles.title,
                   ),
                   Text(
@@ -73,7 +76,7 @@ class AboutSectionWidget extends StatelessWidget {
                         gradient: CustomColors.pinkToBlueGradient,
                         image: DecorationImage(
                           image: AssetImage(
-                            'images/about/dev_picture.jpg',
+                            'assets/images/about/dev_picture.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),
