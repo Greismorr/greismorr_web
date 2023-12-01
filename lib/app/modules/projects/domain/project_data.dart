@@ -22,7 +22,12 @@ class ProjectData {
     required this.projectUrl,
     required DateTime startingDate,
     DateTime? endingDate,
-  }) {
+  }) : assert(
+          startingDate.isBefore(
+            endingDate ?? DateTime.now(),
+          ),
+          "Starting date can't be before endingDate",
+        ) {
     permanence =
         '${startingDate.year} - ${endingDate?.year ?? DateTime.now().year}';
   }
