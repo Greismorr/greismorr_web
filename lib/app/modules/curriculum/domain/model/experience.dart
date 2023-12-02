@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_i18n/flutter_i18n.dart';
+import '../../../../../core/models/mixins/permancence_time_mixin.dart';
 
 class ExperienceList {
   final List<Experience> experiences;
@@ -9,11 +8,14 @@ class ExperienceList {
   );
 }
 
-class Experience {
+class Experience with PermanenceTimeMixin {
   final String company;
   final String role;
   final String description;
+
+  @override
   final DateTime startingDate;
+  @override
   final DateTime? endingDate;
 
   Experience({
@@ -28,10 +30,4 @@ class Experience {
           ),
           "Starting date can't be before endingDate",
         );
-
-  String permanence(BuildContext context) =>
-      '${startingDate.year} - ${endingDate?.year ?? FlutterI18n.translate(
-            context,
-            'curriculum.currentlyOn',
-          )}';
 }

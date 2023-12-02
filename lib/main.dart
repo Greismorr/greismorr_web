@@ -47,7 +47,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: MultiProvider(
         providers: [
-          Provider<ProjectDataList>(
+          Provider(
             create: (context) => ProjectDataList(
               [
                 ProjectData(
@@ -91,7 +91,7 @@ void main() {
               ],
             ),
           ),
-          Provider<ExperienceList>(
+          Provider(
             create: (context) => ExperienceList(
               [
                 Experience(
@@ -120,7 +120,7 @@ void main() {
               ],
             ),
           ),
-          Provider<EducationList>(
+          Provider(
             create: (context) => EducationList(
               [
                 Education(
@@ -138,7 +138,7 @@ void main() {
               ],
             ),
           ),
-          Provider<TechnologyList>(
+          Provider(
             create: (context) => TechnologyList(
               [
                 Technology(
