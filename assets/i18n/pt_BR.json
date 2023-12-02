@@ -7,8 +7,11 @@
         "devTitle": "Desenvolvedor Mobile",
         "iAmDev": "eu sou"
     },
-    "experience": {
-        "sectionTitle": "Experiências"
+    "curriculum": {
+        "sectionTitle": "Experiências",
+        "experienceTitle": "Experiências",
+        "currentlyOn": "Atual",
+        "educationTitle": "Educação"
     },   
      "projects": {
         "sectionTitle": "Projetos",

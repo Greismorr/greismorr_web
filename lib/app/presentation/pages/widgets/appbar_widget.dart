@@ -13,7 +13,7 @@ class AppbarWidget extends StatefulWidget {
 class _AppbarWidgetState extends State<AppbarWidget> {
   final List<String> portfolioSections = [
     'aboutMe',
-    'experience',
+    'curriculum',
     'projects',
     'skills',
   ];

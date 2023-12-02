@@ -17,7 +17,7 @@ class ProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 600,
+      width: 478,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -70,7 +70,7 @@ class ProjectWidget extends StatelessWidget {
             ),
             child: Text(
               project.description,
-              style: CustomTextStyles.h4,
+              style: CustomTextStyles.body16,
             ),
           ),
         ],

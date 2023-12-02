@@ -12,7 +12,6 @@ class ProjectData {
   final List<String> skills;
   final String asset;
   final String projectUrl;
-  late final String permanence;
 
   ProjectData({
     required this.name,
@@ -20,15 +19,5 @@ class ProjectData {
     required this.skills,
     required this.asset,
     required this.projectUrl,
-    required DateTime startingDate,
-    DateTime? endingDate,
-  }) : assert(
-          startingDate.isBefore(
-            endingDate ?? DateTime.now(),
-          ),
-          "Starting date can't be before endingDate",
-        ) {
-    permanence =
-        '${startingDate.year} - ${endingDate?.year ?? DateTime.now().year}';
-  }
+  });
 }

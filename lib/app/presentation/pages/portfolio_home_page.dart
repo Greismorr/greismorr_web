@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../../domain/model/assets_precacher.dart';
 import '../../modules/about/presentation/about_section.dart';
 import '../../modules/about/presentation/widgets/animated_background_widget.dart';
+import '../../modules/curriculum/presentation/curriculum_section.dart';
 import '../../modules/projects/presentation/projects_section.dart';
 import 'widgets/appbar_widget.dart';
 
@@ -47,6 +48,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
               children: [
                 AboutSection(),
                 ProjectsSection(),
+                CurriculumSection(),
               ],
             ),
           ),

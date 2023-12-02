@@ -7,7 +7,9 @@ class CustomColors {
   static const Color pinkLight = Color(0xFFffd4f6);
   static const Color pinkDark = Color(0xFF73015A);
   static const Color gray900 = Color(0xFFF8F9FA);
+  static const Color gray800 = Color(0xFFF1F3F5);
   static const Color gray700 = Color(0xFFE9ECEF);
+  static const Color gray600 = Color(0xFFDEE2E6);
 
   static const Gradient pinkToPurpleGradient = LinearGradient(
     begin: Alignment.centerLeft,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
-import 'widgets/project_widget.dart';
-import '../../../../core/utils/theme/custom_text_styles.dart';
-import '../../../../core/widgets/gradient_text.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../core/utils/theme/custom_text_styles.dart';
 import '../../../../core/widgets/gradient_icon.dart';
+import '../../../../core/widgets/gradient_text.dart';
 import '../domain/project_data.dart';
+import 'widgets/project_widget.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});

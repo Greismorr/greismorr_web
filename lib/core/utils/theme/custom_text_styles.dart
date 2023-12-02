@@ -53,4 +53,22 @@ class CustomTextStyles {
     fontWeight: FontWeight.w500,
     color: CustomColors.gray700,
   );
+
+  static final body16 = GoogleFonts.inter(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: CustomColors.gray700,
+  );
+
+  static final body14 = GoogleFonts.inter(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: CustomColors.gray600,
+  );
+
+  static final dataRange = GoogleFonts.inter(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: CustomColors.gray800,
+  );
 }
