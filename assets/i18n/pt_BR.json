@@ -7,18 +7,32 @@
         "devTitle": "Desenvolvedor Mobile",
         "iAmDev": "eu sou"
     },
+     "projects": {
+        "sectionTitle": "Projetos",
+        "helperText": "Os projetos desta seção não incluem as experiências no mercado tradicional"
+    }, 
     "curriculum": {
         "sectionTitle": "Experiências",
         "experienceTitle": "Experiências",
         "currentlyOn": "Atual",
         "educationTitle": "Educação"
-    },   
-     "projects": {
-        "sectionTitle": "Projetos",
-        "helperText": "Os projetos desta seção não incluem as experiências no mercado tradicional"
     },    
-    "skills": {
-        "sectionTitle": "Habilidades"
+    "technologies": {
+        "sectionTitle": "Tecnologias",
+        "technologyProwess": {
+            "mains": {
+                "title": "Principais",
+                "description": "Tecnologias que uso no cotidiano"
+            },
+            "knowns": {
+                "title": "Conhecidas",
+                "description": "Tecnologias que uso esporadicamente"
+            },
+            "familiar": {
+                "title": "Familiares",
+                "description": "Tecnologias que usei pela última vez há algum tempo"
+            }
+        }
     },
     "home": {
         "welcome": "Bem-vindo"

@@ -10,6 +10,8 @@ import 'app/domain/model/custom_scroll_behavior.dart';
 import 'app/modules/curriculum/domain/model/education.dart';
 import 'app/modules/curriculum/domain/model/experience.dart';
 import 'app/modules/projects/domain/project_data.dart';
+import 'app/modules/technologies/domain/enum/technology_prowess.dart';
+import 'app/modules/technologies/domain/technology.dart';
 import 'app/presentation/pages/portfolio_home_page.dart';
 
 void main() {
@@ -89,23 +91,6 @@ void main() {
               ],
             ),
           ),
-          Provider<AssetsPrecacher>(
-            create: (context) => AssetsPrecacher(
-              devPictureAsset: 'assets/images/about/dev_picture.jpg',
-              meshGradientAssets: [
-                'assets/images/mesh_gradient/mesh_gradient_step_1.png',
-                'assets/images/mesh_gradient/mesh_gradient_step_2.png',
-                'assets/images/mesh_gradient/mesh_gradient_step_3.png'
-              ],
-              projectsAssets: context
-                  .read<ProjectDataList>()
-                  .projects
-                  .map(
-                    (e) => e.asset,
-                  )
-                  .toList(),
-            ),
-          ),
           Provider<ExperienceList>(
             create: (context) => ExperienceList(
               [
@@ -151,6 +136,136 @@ void main() {
                   endingDate: DateTime(2023, 1, 1),
                 ),
               ],
+            ),
+          ),
+          Provider<TechnologyList>(
+            create: (context) => TechnologyList(
+              [
+                Technology(
+                  name: 'Java',
+                  asset: 'assets/images/technologies/java.png',
+                  prowess: TechnologyProwess.familiars,
+                ),
+                Technology(
+                  name: 'AWS',
+                  asset: 'assets/images/technologies/aws.png',
+                  prowess: TechnologyProwess.knowns,
+                ),
+                Technology(
+                  name: 'Cloud Functions',
+                  asset: 'assets/images/technologies/cloud_functions.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Codemagic',
+                  asset: 'assets/images/technologies/codemagic.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Fastlane',
+                  asset: 'assets/images/technologies/fastlane.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Firebase',
+                  asset: 'assets/images/technologies/firebase.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Flagsmith',
+                  asset: 'assets/images/technologies/flagsmith.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Java',
+                  asset: 'assets/images/technologies/java.png',
+                  prowess: TechnologyProwess.familiars,
+                ),
+                Technology(
+                  name: 'Flutter',
+                  asset: 'assets/images/technologies/flutter.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Google Maps API',
+                  asset: 'assets/images/technologies/google_maps.png',
+                  prowess: TechnologyProwess.knowns,
+                ),
+                Technology(
+                  name: 'Mapbox',
+                  asset: 'assets/images/technologies/mapbox.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'MySQL',
+                  asset: 'assets/images/technologies/my_sql.png',
+                  prowess: TechnologyProwess.knowns,
+                ),
+                Technology(
+                  name: 'Postgres',
+                  asset: 'assets/images/technologies/postgress.png',
+                  prowess: TechnologyProwess.knowns,
+                ),
+                Technology(
+                  name: 'NodeJS',
+                  asset: 'assets/images/technologies/nodejs.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'OneSignal',
+                  asset: 'assets/images/technologies/onesignal.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Open Street Maps',
+                  asset: 'assets/images/technologies/open_street_maps.png',
+                  prowess: TechnologyProwess.knowns,
+                ),
+                Technology(
+                  name: 'Python',
+                  asset: 'assets/images/technologies/python.png',
+                  prowess: TechnologyProwess.familiars,
+                ),
+                Technology(
+                  name: 'React',
+                  asset: 'assets/images/technologies/react.png',
+                  prowess: TechnologyProwess.knowns,
+                ),
+                Technology(
+                  name: 'Sonarqube',
+                  asset: 'assets/images/technologies/sonarqube.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'VueJS',
+                  asset: 'assets/images/technologies/vuejs.png',
+                  prowess: TechnologyProwess.familiars,
+                ),
+              ],
+            ),
+          ),
+          Provider<AssetsPrecacher>(
+            create: (context) => AssetsPrecacher(
+              devPictureAsset: 'assets/images/about/dev_picture.jpg',
+              meshGradientAssets: [
+                'assets/images/mesh_gradient/mesh_gradient_step_1.png',
+                'assets/images/mesh_gradient/mesh_gradient_step_2.png',
+                'assets/images/mesh_gradient/mesh_gradient_step_3.png'
+              ],
+              projectsAssets: context
+                  .read<ProjectDataList>()
+                  .projects
+                  .map(
+                    (e) => e.asset,
+                  )
+                  .toList(),
+              technologiesAssets: context
+                  .read<TechnologyList>()
+                  .technologies
+                  .map(
+                    (e) => e.asset,
+                  )
+                  .toList(),
             ),
           ),
         ],

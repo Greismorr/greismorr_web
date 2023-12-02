@@ -15,7 +15,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
     'aboutMe',
     'curriculum',
     'projects',
-    'skills',
+    'technologies',
   ];
 
   @override
