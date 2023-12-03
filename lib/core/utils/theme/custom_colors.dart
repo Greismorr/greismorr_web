@@ -6,6 +6,7 @@ class CustomColors {
   static const Color circularTextBackgroundColor = Color(0xFF15062B);
   static const Color pinkLight = Color(0xFFffd4f6);
   static const Color pinkDark = Color(0xFF73015A);
+  static const Color pinkMaster = Color(0xFFFFB9BA);
   static const Color gray900 = Color(0xFFF8F9FA);
   static const Color gray800 = Color(0xFFF1F3F5);
   static const Color gray700 = Color(0xFFE9ECEF);

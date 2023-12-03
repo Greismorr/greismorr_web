@@ -17,7 +17,7 @@ class ProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 478,
+      width: 488,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

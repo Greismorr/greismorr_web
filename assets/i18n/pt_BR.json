@@ -9,7 +9,7 @@
     },
      "projects": {
         "sectionTitle": "Projetos",
-        "helperText": "Os projetos desta seção não incluem as experiências no mercado tradicional"
+        "helperText": "Os projetos desta seção não incluem as experiências no mercado tradicional, apenas projetos que desenvolvi ou colaboro/colaborei"
     }, 
     "curriculum": {
         "sectionTitle": "Experiências",
@@ -22,15 +22,15 @@
         "technologyProwess": {
             "mains": {
                 "title": "Principais",
-                "description": "Tecnologias que uso no cotidiano"
+                "description": "Tecnologias que uso no cotidiano."
             },
             "knowns": {
                 "title": "Conhecidas",
-                "description": "Tecnologias que uso esporadicamente"
+                "description": "Tecnologias que uso esporadicamente."
             },
-            "familiar": {
+            "familiars": {
                 "title": "Familiares",
-                "description": "Tecnologias que usei pela última vez há algum tempo"
+                "description": "Tecnologias que usei pela última vez há algum tempo."
             }
         }
     },

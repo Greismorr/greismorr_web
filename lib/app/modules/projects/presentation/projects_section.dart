@@ -13,14 +13,14 @@ class ProjectsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.sizeOf(context);
-
-    return SizedBox(
-      width: size.width * .9,
-      height: size.height,
-      child: Column(
-        children: [
-          Row(
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(
+            bottom: 16,
+          ),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
@@ -50,28 +50,24 @@ class ProjectsSection extends StatelessWidget {
               ),
             ],
           ),
-          Flexible(
-            child: ListView.separated(
-                padding: const EdgeInsets.only(
-                  top: 60,
-                ),
-                scrollDirection: Axis.horizontal,
-                separatorBuilder: (_, __) => const SizedBox(
-                      width: 15,
-                    ),
-                shrinkWrap: true,
-                itemCount: context.read<ProjectDataList>().projects.length,
-                itemBuilder: (_, index) {
-                  final project =
-                      context.read<ProjectDataList>().projects[index];
-
-                  return ProjectWidget(
+        ),
+        Flexible(
+          child: Wrap(
+            runSpacing: 16,
+            spacing: 16,
+            alignment: WrapAlignment.center,
+            children: context
+                .read<ProjectDataList>()
+                .projects
+                .map(
+                  (project) => ProjectWidget(
                     project: project,
-                  );
-                }),
+                  ),
+                )
+                .toList(),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

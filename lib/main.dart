@@ -88,6 +88,22 @@ void main() {
                   asset: 'assets/images/projects/estados_municipios.jpg',
                   projectUrl: 'https://pub.dev/packages/estados_municipios',
                 ),
+                ProjectData(
+                  name: 'internet_builder',
+                  description:
+                      'Pacote para introduzir reatividade ao estado de conexão de rede do usuário. Foi um experimento para o aprendizado de criação e publicação de pacotes.',
+                  skills: ['Flutter', 'Dart Packages'],
+                  asset: 'assets/images/projects/internet_builder.jpg',
+                  projectUrl: 'https://pub.dev/packages/internet_builder',
+                ),
+                ProjectData(
+                  name: 'CobrasEscadas',
+                  description:
+                      'Jogo de dois jogadores com o objetivo de chegar até a posição 100 do tabuleiro enquanto evita obstáculos do mapa.',
+                  skills: ['Flutter'],
+                  asset: 'assets/images/projects/cobras_escadas.jpg',
+                  projectUrl: 'https://github.com/Greismorr/CobrasEscadas',
+                ),
               ],
             ),
           ),
@@ -113,7 +129,7 @@ void main() {
                   company: 'Colégio Integral',
                   role: 'Estagiário',
                   description:
-                      'Atuei na implantação do primeiro sistema Qmágico da Bahia. Além disso, atuei no suporte ao usuário, manutenção de computadores e backup diário do banco de dados',
+                      'Atuei na implantação do primeiro sistema Qmágico da Bahia. Além disso, atuei no suporte ao usuário, manutenção de computadores e backup diário do banco de dados.',
                   startingDate: DateTime(2019, 6, 1),
                   endingDate: DateTime(2020, 7, 1),
                 )
@@ -142,14 +158,19 @@ void main() {
             create: (context) => TechnologyList(
               [
                 Technology(
-                  name: 'Java',
-                  asset: 'assets/images/technologies/java.png',
-                  prowess: TechnologyProwess.familiars,
+                  name: 'Flutter',
+                  asset: 'assets/images/technologies/flutter.png',
+                  prowess: TechnologyProwess.mains,
                 ),
                 Technology(
-                  name: 'AWS',
-                  asset: 'assets/images/technologies/aws.png',
-                  prowess: TechnologyProwess.knowns,
+                  name: 'Firebase',
+                  asset: 'assets/images/technologies/firebase.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'NodeJS',
+                  asset: 'assets/images/technologies/nodejs.png',
+                  prowess: TechnologyProwess.mains,
                 ),
                 Technology(
                   name: 'Cloud Functions',
@@ -167,34 +188,34 @@ void main() {
                   prowess: TechnologyProwess.mains,
                 ),
                 Technology(
-                  name: 'Firebase',
-                  asset: 'assets/images/technologies/firebase.png',
-                  prowess: TechnologyProwess.mains,
-                ),
-                Technology(
                   name: 'Flagsmith',
                   asset: 'assets/images/technologies/flagsmith.png',
                   prowess: TechnologyProwess.mains,
                 ),
                 Technology(
-                  name: 'Java',
-                  asset: 'assets/images/technologies/java.png',
-                  prowess: TechnologyProwess.familiars,
+                  name: 'Mapbox',
+                  asset: 'assets/images/technologies/mapbox.png',
+                  prowess: TechnologyProwess.mains,
                 ),
                 Technology(
-                  name: 'Flutter',
-                  asset: 'assets/images/technologies/flutter.png',
+                  name: 'OneSignal',
+                  asset: 'assets/images/technologies/onesignal.png',
                   prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'Sonarqube',
+                  asset: 'assets/images/technologies/sonarqube.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'React',
+                  asset: 'assets/images/technologies/react.png',
+                  prowess: TechnologyProwess.knowns,
                 ),
                 Technology(
                   name: 'Google Maps API',
                   asset: 'assets/images/technologies/google_maps.png',
                   prowess: TechnologyProwess.knowns,
-                ),
-                Technology(
-                  name: 'Mapbox',
-                  asset: 'assets/images/technologies/mapbox.png',
-                  prowess: TechnologyProwess.mains,
                 ),
                 Technology(
                   name: 'MySQL',
@@ -203,18 +224,13 @@ void main() {
                 ),
                 Technology(
                   name: 'Postgres',
-                  asset: 'assets/images/technologies/postgress.png',
+                  asset: 'assets/images/technologies/postgres.png',
                   prowess: TechnologyProwess.knowns,
                 ),
                 Technology(
-                  name: 'NodeJS',
-                  asset: 'assets/images/technologies/nodejs.png',
-                  prowess: TechnologyProwess.mains,
-                ),
-                Technology(
-                  name: 'OneSignal',
-                  asset: 'assets/images/technologies/onesignal.png',
-                  prowess: TechnologyProwess.mains,
+                  name: 'AWS',
+                  asset: 'assets/images/technologies/aws.png',
+                  prowess: TechnologyProwess.knowns,
                 ),
                 Technology(
                   name: 'Open Street Maps',
@@ -227,14 +243,9 @@ void main() {
                   prowess: TechnologyProwess.familiars,
                 ),
                 Technology(
-                  name: 'React',
-                  asset: 'assets/images/technologies/react.png',
-                  prowess: TechnologyProwess.knowns,
-                ),
-                Technology(
-                  name: 'Sonarqube',
-                  asset: 'assets/images/technologies/sonarqube.png',
-                  prowess: TechnologyProwess.mains,
+                  name: 'Java',
+                  asset: 'assets/images/technologies/java.png',
+                  prowess: TechnologyProwess.familiars,
                 ),
                 Technology(
                   name: 'VueJS',

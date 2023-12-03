@@ -7,6 +7,7 @@ import '../../modules/about/presentation/about_section.dart';
 import '../../modules/about/presentation/widgets/animated_background_widget.dart';
 import '../../modules/curriculum/presentation/curriculum_section.dart';
 import '../../modules/projects/presentation/projects_section.dart';
+import '../../modules/technologies/presentation/pages/technologies_section.dart';
 import 'widgets/appbar_widget.dart';
 
 class PortfolioHomePage extends StatefulWidget {
@@ -30,10 +31,10 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
-      appBar: PreferredSize(
+      appBar: const PreferredSize(
         preferredSize: Size(
           double.infinity,
           kToolbarHeight,
@@ -42,13 +43,27 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
       ),
       body: Stack(
         children: [
-          AnimatedBackgroundWidget(),
-          SingleChildScrollView(
-            child: Column(
-              children: [
+          const AnimatedBackgroundWidget(),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 72,
+            ),
+            child: ListView(
+              children: const [
                 AboutSection(),
-                ProjectsSection(),
-                CurriculumSection(),
+                Padding(
+                  padding: EdgeInsets.only(
+                    bottom: 200,
+                  ),
+                  child: ProjectsSection(),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    bottom: 200,
+                  ),
+                  child: CurriculumSection(),
+                ),
+                TechnologiesSection(),
               ],
             ),
           ),

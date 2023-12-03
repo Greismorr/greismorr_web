@@ -11,7 +11,7 @@ class ProjectImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 600,
+      width: 488,
       height: 273,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(
