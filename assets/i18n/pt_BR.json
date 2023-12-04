@@ -9,13 +9,51 @@
     },
      "projects": {
         "sectionTitle": "Projetos",
-        "helperText": "Os projetos desta seção não incluem as experiências no mercado tradicional, apenas projetos que desenvolvi ou colaboro/colaborei"
+        "helperText": "Os projetos desta seção não incluem as experiências no mercado tradicional, apenas projetos que desenvolvi ou colaboro/colaborei",
+        "pauliceia": {
+            "description": "Plataforma que visa fazer o mapeamento colaborativo da história de São Paulo no período de 1870 a 1940."
+        },
+        "bisnez": {
+            "description": "Rede social voltada a empreendedores, focada principalmente em oferecer-lhes apoio para nas fases inicias."
+        },
+        "estados_municipios": {
+            "description": "Pacote criado para abstrair o uso da API do IBGE para obtenção de estados e de municipios."
+        },
+        "internet_builder": {
+            "description": "Pacote para introduzir reatividade ao estado de conexão de rede do usuário."
+        },
+        "cobrasescadas": {
+            "description": "Jogo de dois jogadores com o objetivo de chegar até a posição 100 do tabuleiro enquanto evita obstáculos do mapa."
+        }
     }, 
     "curriculum": {
         "sectionTitle": "Experiências",
         "experienceTitle": "Experiências",
         "currentlyOn": "Atual",
-        "educationTitle": "Educação"
+        "experiences": {
+            "sectionTitle": "Experiências",
+            "petize": {
+                "role": "Project Lead e Mobile Senior Engineer",
+                "description": "Atuo liderando o desenvolvimento de alguns projetos da empresa, tanto na Web quanto Mobile (Android/iOS), e organizando o backlog dos produtos. Além disso, atuo como Desenvolvedor Mobile Sênior utilizando Flutter e, quando necessário, dou suporte ao time atuando nas outras áreas."
+            },
+            "ifba": {
+                "role": "Bolsista de Iniciação Tecnológica",
+                "description": "Desenvolvimento e manutenção da Bisnez com Flutter, uma rede social com foco em empreendedorismo disponível para Android e iOS."
+            },
+            "colégio integral": {
+                "role": "Estagiário",
+                "description": "Atuei na implantação do primeiro sistema Qmágico da Bahia. Além disso, atuei no suporte ao usuário, manutenção de computadores e backup diário do banco de dados."
+            }
+        },
+        "education": {
+            "sectionTitle": "Educação",
+            "ifba": {
+                "course":  "Tecnólogo em Análise e Desenvolvimento de Sistemas"
+            },
+            "ufmg": {
+                "course":  "Extensão em Engenharia de Software Moderna"
+            }
+        }
     },    
     "technologies": {
         "sectionTitle": "Tecnologias",

@@ -52,8 +52,6 @@ void main() {
               [
                 ProjectData(
                   name: 'Pauliceia',
-                  description:
-                      'Plataforma que visa fazer o mapeamento colaborativo da história de São Paulo no período de 1870 a 1940.',
                   skills: [
                     'VueJS',
                     'Python',
@@ -67,8 +65,6 @@ void main() {
                 ),
                 ProjectData(
                   name: 'Bisnez',
-                  description:
-                      'Rede social voltada a empreendedores, focada principalmente em oferecer-lhes apoio para as fases de estabelecimento dos requisitos da proposta, validação, formação de equipes e preparação para incubação ou aceleração.',
                   skills: [
                     'Flutter',
                     'CI/CD',
@@ -82,24 +78,18 @@ void main() {
                 ),
                 ProjectData(
                   name: 'estados_municipios',
-                  description:
-                      'Pacote criado para abstrair o uso da API do IBGE para obtenção de estados e de municipios.',
                   skills: ['Dart', 'Dart Packages'],
                   asset: 'assets/images/projects/estados_municipios.jpg',
                   projectUrl: 'https://pub.dev/packages/estados_municipios',
                 ),
                 ProjectData(
                   name: 'internet_builder',
-                  description:
-                      'Pacote para introduzir reatividade ao estado de conexão de rede do usuário. Foi um experimento para o aprendizado de criação e publicação de pacotes.',
                   skills: ['Flutter', 'Dart Packages'],
                   asset: 'assets/images/projects/internet_builder.jpg',
                   projectUrl: 'https://pub.dev/packages/internet_builder',
                 ),
                 ProjectData(
                   name: 'CobrasEscadas',
-                  description:
-                      'Jogo de dois jogadores com o objetivo de chegar até a posição 100 do tabuleiro enquanto evita obstáculos do mapa.',
                   skills: ['Flutter'],
                   asset: 'assets/images/projects/cobras_escadas.jpg',
                   projectUrl: 'https://github.com/Greismorr/CobrasEscadas',
@@ -112,24 +102,15 @@ void main() {
               [
                 Experience(
                   company: 'Petize',
-                  role: 'Project Lead e Mobile Senior Engineer',
-                  description:
-                      'Atuo liderando o desenvolvimento de sistemas Web e Mobile (Android/iOS) em dois projetos da empresa. Sou também responsável pelo treinamento e supervisão do time. Entretanto, quando necessário, dou suporte ao time atuando nas outras áreas para que seja possível concluir o maior número possível de tarefas.',
                   startingDate: DateTime(2022, 2, 1),
                 ),
                 Experience(
                   company: 'IFBA',
-                  role: 'Bolsista de Iniciação Tecnológica',
-                  description:
-                      'Desenvolvimento e manutenção da Bisnez com Flutter, uma rede social com foco em empreendedorismo disponível para Android e iOS.',
                   startingDate: DateTime(2021, 6, 1),
                   endingDate: DateTime(2023, 3, 1),
                 ),
                 Experience(
                   company: 'Colégio Integral',
-                  role: 'Estagiário',
-                  description:
-                      'Atuei na implantação do primeiro sistema Qmágico da Bahia. Além disso, atuei no suporte ao usuário, manutenção de computadores e backup diário do banco de dados.',
                   startingDate: DateTime(2019, 6, 1),
                   endingDate: DateTime(2020, 7, 1),
                 )
@@ -141,13 +122,11 @@ void main() {
               [
                 Education(
                   school: 'UFMG',
-                  course: 'Extensão em Engenharia de Software Moderna',
                   startingDate: DateTime(2023, 8, 1),
                   endingDate: DateTime(2023, 11, 1),
                 ),
                 Education(
                   school: 'IFBA',
-                  course: 'Tecnólogo em Análise e Desenvolvimento de Sistemas',
                   startingDate: DateTime(2018, 6, 1),
                   endingDate: DateTime(2023, 1, 1),
                 ),

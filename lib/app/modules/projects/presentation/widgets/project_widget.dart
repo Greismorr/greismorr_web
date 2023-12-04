@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/utils/theme/custom_colors.dart';
@@ -69,7 +70,10 @@ class ProjectWidget extends StatelessWidget {
               top: 8,
             ),
             child: Text(
-              project.description,
+              FlutterI18n.translate(
+                context,
+                project.description,
+              ),
               style: CustomTextStyles.body16,
             ),
           ),

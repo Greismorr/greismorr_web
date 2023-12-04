@@ -8,10 +8,11 @@ class ExperienceList {
   );
 }
 
+/// Os campos role e description retornarão as chaves de internacionalização
+/// a partir do nome da empresa. Portanto, ao inserir uma nova Experience,
+/// certifique-se de também criar os campos nos arquivos de internacionalização.
 class Experience with PermanenceTimeMixin {
   final String company;
-  final String role;
-  final String description;
 
   @override
   final DateTime startingDate;
@@ -20,8 +21,6 @@ class Experience with PermanenceTimeMixin {
 
   Experience({
     required this.company,
-    required this.role,
-    required this.description,
     required this.startingDate,
     this.endingDate,
   }) : assert(
@@ -30,4 +29,8 @@ class Experience with PermanenceTimeMixin {
           ),
           "Starting date can't be before endingDate",
         );
+
+  String get role => 'curriculum.experiences.${company.toLowerCase()}.role';
+  String get description =>
+      'curriculum.experiences.${company.toLowerCase()}.description';
 }

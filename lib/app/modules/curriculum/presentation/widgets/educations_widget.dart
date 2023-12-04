@@ -18,7 +18,7 @@ class EducationsWidget extends StatelessWidget {
           text: Text(
             FlutterI18n.translate(
               context,
-              'curriculum.educationTitle',
+              'curriculum.education.sectionTitle',
             ),
             style: CustomTextStyles.section,
           ),
@@ -57,7 +57,10 @@ class EducationsWidget extends StatelessWidget {
                               vertical: 8,
                             ),
                             child: Text(
-                              experience.course,
+                              FlutterI18n.translate(
+                                context,
+                                experience.course,
+                              ),
                               style: CustomTextStyles.h4,
                             ),
                           ),

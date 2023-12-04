@@ -8,9 +8,11 @@ class EducationList {
   );
 }
 
+/// O campos couse retornará a chave de internacionalização 
+/// a partir do nome da instituição de ensino. Portanto, ao inserir uma nova Education,
+/// certifique-se de também criar os campos nos arquivos de internacionalização.
 class Education with PermanenceTimeMixin {
   final String school;
-  final String course;
 
   @override
   final DateTime startingDate;
@@ -19,7 +21,6 @@ class Education with PermanenceTimeMixin {
 
   Education({
     required this.school,
-    required this.course,
     required this.startingDate,
     this.endingDate,
   }) : assert(
@@ -28,4 +29,6 @@ class Education with PermanenceTimeMixin {
           ),
           "Starting date can't be before endingDate",
         );
+
+  String get course => 'curriculum.education.${school.toLowerCase()}.course';
 }
