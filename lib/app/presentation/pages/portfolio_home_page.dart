@@ -7,6 +7,7 @@ import '../../modules/about/presentation/about_section.dart';
 import '../../modules/about/presentation/widgets/animated_background_widget.dart';
 import '../../modules/curriculum/presentation/curriculum_section.dart';
 import '../../modules/projects/presentation/projects_section.dart';
+import '../../modules/contacts/presentation/pages/contacts_section.dart';
 import '../../modules/technologies/presentation/pages/technologies_section.dart';
 import 'widgets/appbar_widget.dart';
 
@@ -63,7 +64,18 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                   ),
                   child: CurriculumSection(),
                 ),
-                TechnologiesSection(),
+                Padding(
+                  padding: EdgeInsets.only(
+                    bottom: 150,
+                  ),
+                  child: TechnologiesSection(),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    bottom: 100,
+                  ),
+                  child: ContactsSection(),
+                ),
               ],
             ),
           ),

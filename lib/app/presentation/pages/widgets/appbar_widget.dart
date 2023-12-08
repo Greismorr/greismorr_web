@@ -29,10 +29,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
           TextButton(
             onPressed: () {},
             child: Text(
-              FlutterI18n.translate(
-                context,
-                'devName',
-              ),
+              'Gabriel Reis',
               style: CustomTextStyles.menuOptions,
             ),
           ),

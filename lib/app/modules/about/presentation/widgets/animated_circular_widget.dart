@@ -58,10 +58,7 @@ class _AnimatedCircularWidgetState extends State<AnimatedCircularWidget>
                 children: [
                   TextItem(
                     text: Text(
-                      FlutterI18n.translate(
-                        context,
-                        'devName',
-                      ),
+                      'Gabriel Reis',
                       style: CustomTextStyles.circularText,
                     ),
                     space: 8,

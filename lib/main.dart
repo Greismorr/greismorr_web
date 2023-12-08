@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 
 import 'app/domain/model/assets_precacher.dart';
 import 'app/domain/model/custom_scroll_behavior.dart';
+import 'app/modules/contacts/domain/model/contact.dart';
 import 'app/modules/curriculum/domain/model/education.dart';
 import 'app/modules/curriculum/domain/model/experience.dart';
 import 'app/modules/projects/domain/project_data.dart';
@@ -256,6 +257,27 @@ void main() {
                     (e) => e.asset,
                   )
                   .toList(),
+            ),
+          ),
+          Provider(
+            create: (context) => ContactList(
+              [
+                Contact(
+                  contactMean: 'LinkedIn',
+                  url: 'https://www.linkedin.com/in/ternoreis/',
+                  iconPath: 'assets/icons/Linkedin.svg',
+                ),
+                Contact(
+                  contactMean: 'GitHub',
+                  url: 'https://github.com/Greismorr',
+                  iconPath: 'assets/icons/Github.svg',
+                ),
+                Contact(
+                  contactMean: 'Medium',
+                  url: 'https://medium.com/@greismorr',
+                  iconPath: 'assets/icons/Medium.svg',
+                ),
+              ],
             ),
           ),
         ],

@@ -42,10 +42,7 @@ class AboutSection extends StatelessWidget {
                 '${FlutterI18n.translate(
                   context,
                   'aboutMe.iAmDev',
-                )} ${FlutterI18n.translate(
-                  context,
-                  'devName',
-                )}',
+                )} Gabriel Reis',
                 style: CustomTextStyles.title,
               ),
               Text(

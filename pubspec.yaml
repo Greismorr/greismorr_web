@@ -39,6 +39,7 @@ flutter:
   assets:
     - assets/splash/
     - assets/i18n/
+    - assets/icons/
     - assets/images/
     - assets/images/mesh_gradient/
     - assets/images/about/
