@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../core/utils/theme/custom_text_styles.dart';
+import '../../../domain/model/portfolio_sections.dart';
 
 class AppbarWidget extends StatefulWidget {
   const AppbarWidget({super.key});
@@ -11,13 +13,6 @@ class AppbarWidget extends StatefulWidget {
 }
 
 class _AppbarWidgetState extends State<AppbarWidget> {
-  final List<String> portfolioSections = [
-    'aboutMe',
-    'curriculum',
-    'projects',
-    'technologies',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -34,24 +29,29 @@ class _AppbarWidgetState extends State<AppbarWidget> {
             ),
           ),
           Row(
-            children: List.generate(
-              portfolioSections.length,
-              (index) {
-                final String currentOption =
-                    "${portfolioSections[index]}.sectionTitle";
-
-                return TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    FlutterI18n.translate(
-                      context,
-                      currentOption,
+            children: context
+                .read<PortfolioSections>()
+                .sections
+                .map(
+                  (section) => TextButton(
+                    onPressed: () {
+                      Scrollable.ensureVisible(
+                        section.navigatorKey.currentContext!,
+                        duration: const Duration(
+                          milliseconds: 600,
+                        ),
+                      );
+                    },
+                    child: Text(
+                      FlutterI18n.translate(
+                        context,
+                        section.name,
+                      ),
+                      style: CustomTextStyles.menuOptions,
                     ),
-                    style: CustomTextStyles.menuOptions,
                   ),
-                );
-              },
-            ),
+                )
+                .toList(),
           ),
         ],
       ),

@@ -3,6 +3,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 
 import '../../domain/model/assets_precacher.dart';
+import '../../domain/model/portfolio_sections.dart';
 import '../../modules/about/presentation/about_section.dart';
 import '../../modules/about/presentation/widgets/animated_background_widget.dart';
 import '../../modules/curriculum/presentation/curriculum_section.dart';
@@ -21,6 +22,8 @@ class PortfolioHomePage extends StatefulWidget {
 }
 
 class _PortfolioHomePageState extends State<PortfolioHomePage> {
+  late final portfolioSections = context.read<PortfolioSections>();
+
   @override
   void didChangeDependencies() {
     context.read<AssetsPrecacher>().preCacheAllAssets(context).then(
@@ -34,6 +37,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      drawerScrimColor: Colors.red,
       extendBodyBehindAppBar: true,
       appBar: const PreferredSize(
         preferredSize: Size(
@@ -49,34 +53,57 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
             padding: const EdgeInsets.symmetric(
               horizontal: 72,
             ),
-            child: ListView(
-              children: const [
-                AboutSection(),
-                Padding(
-                  padding: EdgeInsets.only(
-                    bottom: 200,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  AboutSection(
+                    key: portfolioSections
+                        .sectionByKey(
+                          'about',
+                        )
+                        .navigatorKey,
                   ),
-                  child: ProjectsSection(),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    bottom: 200,
+                  Padding(
+                    key: portfolioSections
+                        .sectionByKey(
+                          'projects',
+                        )
+                        .navigatorKey,
+                    padding: const EdgeInsets.only(
+                      bottom: 200,
+                    ),
+                    child: const ProjectsSection(),
                   ),
-                  child: CurriculumSection(),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    bottom: 150,
+                  Padding(
+                    key: portfolioSections
+                        .sectionByKey(
+                          'curriculum',
+                        )
+                        .navigatorKey,
+                    padding: const EdgeInsets.only(
+                      bottom: 200,
+                    ),
+                    child: const CurriculumSection(),
                   ),
-                  child: TechnologiesSection(),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    bottom: 100,
+                  Padding(
+                    key: portfolioSections
+                        .sectionByKey(
+                          'technologies',
+                        )
+                        .navigatorKey,
+                    padding: const EdgeInsets.only(
+                      bottom: 150,
+                    ),
+                    child: const TechnologiesSection(),
                   ),
-                  child: ContactsSection(),
-                ),
-              ],
+                  const Padding(
+                    padding: EdgeInsets.only(
+                      bottom: 100,
+                    ),
+                    child: ContactsSection(),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

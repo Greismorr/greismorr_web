@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 
 import 'app/domain/model/assets_precacher.dart';
 import 'app/domain/model/custom_scroll_behavior.dart';
+import 'app/domain/model/portfolio_sections.dart';
 import 'app/modules/contacts/domain/model/contact.dart';
 import 'app/modules/curriculum/domain/model/education.dart';
 import 'app/modules/curriculum/domain/model/experience.dart';
@@ -276,6 +277,24 @@ void main() {
                   contactMean: 'Medium',
                   url: 'https://medium.com/@greismorr',
                   iconPath: 'assets/icons/Medium.svg',
+                ),
+              ],
+            ),
+          ),
+          Provider(
+            create: (context) => PortfolioSections(
+              [
+                PortfolioSection(
+                  name: 'aboutMe.sectionTitle',
+                ),
+                PortfolioSection(
+                  name: 'projects.sectionTitle',
+                ),
+                PortfolioSection(
+                  name: 'curriculum.sectionTitle',
+                ),
+                PortfolioSection(
+                  name: 'technologies.sectionTitle',
                 ),
               ],
             ),
