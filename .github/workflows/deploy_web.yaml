@@ -17,7 +17,6 @@ jobs:
         run: flutter pub get
 
       - name: Build web app
-        run: flutter pub get
         run: flutter build web --web-renderer html --release
 
       - name: Deploy to gh-pages
