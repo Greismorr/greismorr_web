@@ -13,6 +13,9 @@ jobs:
         with:
           channel: stable
 
+      - name: Get dependencies
+        run: flutter pub get
+
       - name: Build web app
         run: flutter pub get
         run: flutter build web --web-renderer html --release
