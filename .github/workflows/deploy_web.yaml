@@ -5,22 +5,40 @@ on:
     branches: ['main']
 
 jobs:
-  deploy-for-web:
+  build:
+    name: Create Web Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
         with:
-          channel: stable
-
+          channel: 'stable'
+      
       - name: Get dependencies
         run: flutter pub get
 
-      - name: Build web app
-        run: flutter build web --web-renderer html --release
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Start Web Release Build
+        run: flutter build web --release --base-href=/greismorr_web/
+     
+      - name: Upload Web Build Files
+        uses: actions/upload-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
+          name: web-release
+          path: ./build/web
+
+  deploy:
+    name: Deploy Web Build
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download Web Release
+      uses: actions/download-artifact@v2
+      with:
+        name: web-release
+
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
