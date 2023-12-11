@@ -184,6 +184,11 @@ void main() {
                   prowess: TechnologyProwess.mains,
                 ),
                 Technology(
+                  name: 'Branch.io',
+                  asset: 'assets/images/technologies/branch.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
                   name: 'Sonarqube',
                   asset: 'assets/images/technologies/sonarqube.png',
                   prowess: TechnologyProwess.mains,

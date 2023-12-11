@@ -29,7 +29,6 @@ dev_dependencies:
 flutter_native_splash:
   android: false
   ios: false
-  
   color: "#000000"
   image: assets/splash/splash.gif
 

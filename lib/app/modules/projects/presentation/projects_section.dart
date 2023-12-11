@@ -53,8 +53,8 @@ class ProjectsSection extends StatelessWidget {
         ),
         Flexible(
           child: Wrap(
-            runSpacing: 16,
-            spacing: 16,
+            runSpacing: 48,
+            spacing: 48,
             alignment: WrapAlignment.center,
             children: context
                 .read<ProjectDataList>()

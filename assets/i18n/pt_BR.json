@@ -4,7 +4,7 @@
     },
     "aboutMe": {
         "sectionTitle": "Sobre",
-        "sectionText": "Analista de Sistemas formado pelo Instituto Federal da Bahia, atualmente trabalho como Project Lead e Senior Mobile Engineer na Petize. Sou um profissional apaixonado por trabalho em equipe e acredito que o bem estar do time e sua produtividade são dois lados da mesma moeda.\n\nTenho experiência também com Sistemas em Tempo Real, API's de navegação, Firebase, Remote Flags, Flavorização, Cloud Functions, Ecossistema AWS, CI/CD e Monitoramento de performance com coleta de erros.",
+        "sectionText": "Analista de Sistemas formado pelo Instituto Federal de Educação, Ciência e Tecnologia da Bahia (IFBA), atualmente trabalho como Project Lead e Senior Mobile Engineer na Petize. Sou um profissional apaixonado por trabalho em equipe e acredito que o bem estar do time e sua produtividade são dois lados da mesma moeda.\n\nTenho experiência também com Sistemas em Tempo Real, API's de navegação, Firebase, Remote Flags, Flavorização, Cloud Functions, Ecossistema AWS, CI/CD e Monitoramento de performance com coleta de erros.",
         "hello": "Olá",
         "devTitle": "Desenvolvedor Mobile",
         "iAmDev": "eu sou"

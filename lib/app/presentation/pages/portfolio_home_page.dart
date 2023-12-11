@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 
+import '../../domain/constants/section_constants.dart';
 import '../../domain/model/assets_precacher.dart';
 import '../../domain/model/portfolio_sections.dart';
 import '../../modules/about/presentation/about_section.dart';
@@ -59,14 +60,14 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                   AboutSection(
                     key: portfolioSections
                         .sectionByKey(
-                          'about',
+                          SectionConstants.about,
                         )
                         .navigatorKey,
                   ),
                   Padding(
                     key: portfolioSections
                         .sectionByKey(
-                          'projects',
+                          SectionConstants.projects,
                         )
                         .navigatorKey,
                     padding: const EdgeInsets.only(
@@ -77,7 +78,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                   Padding(
                     key: portfolioSections
                         .sectionByKey(
-                          'curriculum',
+                          SectionConstants.curriculum,
                         )
                         .navigatorKey,
                     padding: const EdgeInsets.only(
@@ -88,7 +89,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                   Padding(
                     key: portfolioSections
                         .sectionByKey(
-                          'technologies',
+                          SectionConstants.technologies,
                         )
                         .navigatorKey,
                     padding: const EdgeInsets.only(
