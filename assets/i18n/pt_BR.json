@@ -1,4 +1,7 @@
 {
+    "drawer": {
+        "drawerTitle": "Seções"
+    },
     "home": {
         "welcome": "Bem-vindo"
     },

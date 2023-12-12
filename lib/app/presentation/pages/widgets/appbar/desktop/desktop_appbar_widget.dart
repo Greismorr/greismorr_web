@@ -2,26 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../core/utils/theme/custom_text_styles.dart';
-import '../../../domain/constants/section_constants.dart';
-import '../../../domain/model/portfolio_sections.dart';
+import '../../../../../../core/utils/theme/custom_text_styles.dart';
+import '../../../../../domain/constants/section_constants.dart';
+import '../../../../../domain/model/portfolio_sections.dart';
 
-class AppbarWidget extends StatefulWidget {
-  const AppbarWidget({super.key});
+class DesktopAppbarWidget extends StatefulWidget {
+  const DesktopAppbarWidget({super.key});
 
   @override
-  State<AppbarWidget> createState() => _AppbarWidgetState();
+  State<DesktopAppbarWidget> createState() => _DesktopAppbarWidgetState();
 }
 
-class _AppbarWidgetState extends State<AppbarWidget> {
+class _DesktopAppbarWidgetState extends State<DesktopAppbarWidget> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.black.withOpacity(.6),
       elevation: 0,
       title: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 128,
+        padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.sizeOf(context).width * .08,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

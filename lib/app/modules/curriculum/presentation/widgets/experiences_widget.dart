@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../../core/utils/theme/custom_text_styles.dart';
-import '../../../../../core/widgets/gradient_text.dart';
+import '../../../../../../core/utils/theme/custom_text_styles.dart';
+import '../../../../../../core/widgets/gradient_text.dart';
 import '../../domain/model/experience.dart';
 
 class ExperiencesWidget extends StatelessWidget {

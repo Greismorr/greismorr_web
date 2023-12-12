@@ -4,10 +4,10 @@ import 'package:provider/provider.dart';
 
 import '../../../../../../core/utils/theme/custom_text_styles.dart';
 import '../../../../../../core/widgets/gradient_text.dart';
-import '../../domain/model/education.dart';
+import '../../../domain/model/experience.dart';
 
-class EducationsWidget extends StatelessWidget {
-  const EducationsWidget({super.key});
+class ExperiencesWidget extends StatelessWidget {
+  const ExperiencesWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +18,14 @@ class EducationsWidget extends StatelessWidget {
           text: Text(
             FlutterI18n.translate(
               context,
-              'curriculum.education.sectionTitle',
+              'curriculum.experiences.sectionTitle',
             ),
             style: CustomTextStyles.section,
           ),
         ),
         ...context
-            .read<EducationList>()
-            .educations
+            .read<ExperienceList>()
+            .experiences
             .map(
               (experience) => Padding(
                 padding: const EdgeInsets.only(
@@ -49,7 +49,7 @@ class EducationsWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            experience.school,
+                            experience.company,
                             style: CustomTextStyles.h3,
                           ),
                           Padding(
@@ -59,10 +59,17 @@ class EducationsWidget extends StatelessWidget {
                             child: Text(
                               FlutterI18n.translate(
                                 context,
-                                experience.course,
+                                experience.role,
                               ),
                               style: CustomTextStyles.h4,
                             ),
+                          ),
+                          Text(
+                            FlutterI18n.translate(
+                              context,
+                              experience.description,
+                            ),
+                            style: CustomTextStyles.body14,
                           ),
                         ],
                       ),
