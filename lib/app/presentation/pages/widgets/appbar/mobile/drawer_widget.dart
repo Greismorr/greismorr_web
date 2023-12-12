@@ -57,12 +57,16 @@ class DrawerWidget extends StatelessWidget {
                         ),
                         style: CustomTextStyles.menuOptions,
                       ),
-                      onTap: () => Scrollable.ensureVisible(
-                        section.navigatorKey.currentContext!,
-                        duration: const Duration(
-                          milliseconds: 600,
-                        ),
-                      ),
+                      onTap: () {
+                        Navigator.pop(context);
+
+                        Scrollable.ensureVisible(
+                          section.navigatorKey.currentContext!,
+                          duration: const Duration(
+                            milliseconds: 600,
+                          ),
+                        );
+                      },
                     ),
                   ),
             ],
