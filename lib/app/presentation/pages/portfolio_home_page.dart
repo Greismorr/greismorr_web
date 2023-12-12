@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:greismorr_web/app/presentation/pages/widgets/appbar/mobile/mobile_appbar_widget.dart';
 import 'package:provider/provider.dart';
 
 import '../../../core/utils/is_mobile_version.dart';
@@ -12,7 +13,8 @@ import '../../modules/curriculum/presentation/curriculum_section.dart';
 import '../../modules/projects/presentation/projects_section.dart';
 import '../../modules/contacts/presentation/pages/contacts_section.dart';
 import '../../modules/technologies/presentation/pages/technologies_section.dart';
-import 'widgets/appbar_widget.dart';
+import 'widgets/appbar/desktop/desktop_appbar_widget.dart';
+import 'widgets/appbar/mobile/drawer_widget.dart';
 
 class PortfolioHomePage extends StatefulWidget {
   const PortfolioHomePage({
@@ -39,14 +41,16 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      drawerScrimColor: Colors.red,
       extendBodyBehindAppBar: true,
-      appBar: const PreferredSize(
-        preferredSize: Size(
+      endDrawer: isMobileVersion(context) ? const DrawerWidget() : null,
+      appBar: PreferredSize(
+        preferredSize: const Size(
           double.infinity,
           kToolbarHeight,
         ),
-        child: AppbarWidget(),
+        child: isMobileVersion(context)
+            ? const MobileAppbarWidget()
+            : const DesktopAppbarWidget(),
       ),
       body: Stack(
         children: [
@@ -58,7 +62,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  AboutSection(
+                   AboutSection(
                     key: portfolioSections
                         .sectionByKey(
                           SectionConstants.about,
@@ -103,7 +107,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                       bottom: isMobileVersion(context) ? 50 : 100,
                     ),
                     child: const ContactsSection(),
-                  ),
+                  ), 
                 ],
               ),
             ),
