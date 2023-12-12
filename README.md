@@ -1,8 +1,6 @@
 # greismorr_web
 
-<h1 align="center">
-    ![Prévia do Web App](image.png)
-</h1>
+![Prévia do Web App](image.png)
 
 <br>
 
