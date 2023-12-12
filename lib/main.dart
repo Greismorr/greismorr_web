@@ -30,7 +30,6 @@ void main() {
         FlutterI18nDelegate(
           translationLoader: FileTranslationLoader(
             basePath: 'assets/i18n',
-            useCountryCode: true,
           ),
           missingTranslationHandler: (key, locale) {
             if (kDebugMode) {
@@ -45,6 +44,14 @@ void main() {
       ],
       supportedLocales: const [
         Locale('pt', 'BR'),
+        Locale('en', 'GB'),
+        Locale('en', 'CA'),
+        Locale('en', 'AU'),
+        Locale('en', 'NZ'),
+        Locale('en', 'IN'),
+        Locale('en', 'IE'),
+        Locale('en', 'SG'),
+        Locale('en', 'ZA'),
       ],
       debugShowCheckedModeBanner: false,
       home: MultiProvider(
