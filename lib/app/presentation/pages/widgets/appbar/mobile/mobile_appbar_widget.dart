@@ -11,7 +11,7 @@ class MobileAppbarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.black.withOpacity(.6),
       elevation: 0,
       iconTheme: const IconThemeData(
         color: Colors.white,

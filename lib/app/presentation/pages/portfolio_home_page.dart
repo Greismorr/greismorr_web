@@ -62,7 +62,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                   AboutSection(
+                  AboutSection(
                     key: portfolioSections
                         .sectionByKey(
                           SectionConstants.about,
@@ -75,8 +75,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                           SectionConstants.projects,
                         )
                         .navigatorKey,
-                    padding: const EdgeInsets.only(
-                      bottom: 200,
+                    padding: EdgeInsets.only(
+                      bottom: isMobileVersion(context) ? 100 : 200,
                     ),
                     child: const ProjectsSection(),
                   ),
@@ -97,8 +97,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                           SectionConstants.technologies,
                         )
                         .navigatorKey,
-                    padding: const EdgeInsets.only(
-                      bottom: 150,
+                    padding: EdgeInsets.only(
+                      bottom: isMobileVersion(context) ? 50 : 150,
                     ),
                     child: const TechnologiesSection(),
                   ),
@@ -107,7 +107,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                       bottom: isMobileVersion(context) ? 50 : 100,
                     ),
                     child: const ContactsSection(),
-                  ), 
+                  ),
                 ],
               ),
             ),
