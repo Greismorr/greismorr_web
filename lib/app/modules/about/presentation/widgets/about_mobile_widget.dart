@@ -53,7 +53,7 @@ class AboutMobileWidget extends StatelessWidget {
             width: 300,
             height: 250,
             margin: const EdgeInsets.symmetric(
-              vertical: 16,
+              vertical: 32,
             ),
             child: Stack(
               alignment: Alignment.bottomLeft,
