@@ -82,8 +82,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                           SectionConstants.curriculum,
                         )
                         .navigatorKey,
-                    padding: const EdgeInsets.only(
-                      bottom: 200,
+                    padding: EdgeInsets.only(
+                      bottom: isMobileVersion(context) ? 100 : 200,
                     ),
                     child: const CurriculumSection(),
                   ),
