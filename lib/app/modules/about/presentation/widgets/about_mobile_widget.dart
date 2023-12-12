@@ -23,46 +23,38 @@ class AboutMobileWidget extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(
-              top: 48,
+              top: 64,
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Row(
               children: [
-                Row(
-                  children: [
-                    Text(
-                      '${FlutterI18n.translate(
-                        context,
-                        'aboutMe.hello',
-                      )}, ',
-                      style: CustomTextStyles.title,
-                    ),
-                    const AnimatedWavingHandWidget(),
-                  ],
-                ),
                 Text(
                   '${FlutterI18n.translate(
                     context,
-                    'aboutMe.iAmDev',
-                  )} Gabriel Reis',
+                    'aboutMe.hello',
+                  )}, ',
                   style: CustomTextStyles.title.copyWith(
                     fontSize: 48,
                   ),
                 ),
-                Text(
-                  FlutterI18n.translate(
-                    context,
-                    'aboutMe.sectionText',
-                  ),
-                  style: CustomTextStyles.subtitle,
-                ),
+                const AnimatedWavingHandWidget(),
               ],
             ),
           ),
-          SizedBox(
+          Text(
+            '${FlutterI18n.translate(
+              context,
+              'aboutMe.iAmDev',
+            )} Gabriel Reis',
+            style: CustomTextStyles.title.copyWith(
+              fontSize: 32,
+            ),
+          ),
+          Container(
             width: 300,
             height: 250,
+            margin: const EdgeInsets.symmetric(
+              vertical: 16,
+            ),
             child: Stack(
               alignment: Alignment.bottomLeft,
               children: [
@@ -89,6 +81,13 @@ class AboutMobileWidget extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Text(
+            FlutterI18n.translate(
+              context,
+              'aboutMe.sectionText',
+            ),
+            style: CustomTextStyles.subtitle,
           ),
         ],
       ),
