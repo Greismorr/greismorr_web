@@ -2,8 +2,6 @@
 
 ![Prévia do Web App](image.png)
 
-<br>
-
 ## 📑 Portfólio Dev
 
 Portfólio em formato de Web App feito em Flutter. A aplicação está dividida nas seguintes seções:
