@@ -1,0 +1,83 @@
+{
+    "drawer": {
+        "drawerTitle": "Sections"
+    },
+    "home": {
+        "welcome": "Welcome"
+    },
+    "aboutMe": {
+        "sectionTitle": "About Me",
+        "sectionText": "Systems Analyst graduated from the Federal Institute of Education, Science and Technology of Bahia (IFBA). Currently, I work as a Project Lead and Senior Mobile Engineer at Petize. I am a professional passionate about teamwork, believing that team well-being and productivity go hand in hand.\n\nI also have experience with Real-Time Systems, Navigation APIs, Firebase, Remote Flags, Flavors, Cloud Functions, AWS Ecosystem, CI/CD, and performance monitoring with error collection.",
+        "hello": "Hello",
+        "devTitle": "Mobile Developer",
+        "iAmDev": "I am"
+    },
+    "projects": {
+        "sectionTitle": "Projects",
+        "helperText": "The projects in this section do not include experiences in the traditional market, only projects I have developed or contributed to.",
+        "pauliceia": {
+            "description": "Platform aimed at collaboratively mapping the history of São Paulo from 1870 to 1940."
+        },
+        "bisnez": {
+            "description": "Social network for entrepreneurs, primarily focused on providing support in the early stages."
+        },
+        "estados_municipios": {
+            "description": "Package created to abstract the use of the IBGE API for obtaining states and municipalities."
+        },
+        "internet_builder": {
+            "description": "Package to introduce reactivity to the user's network connection status."
+        },
+        "cobrasescadas": {
+            "description": "Two-player game with the goal of reaching position 100 on the board while avoiding map obstacles."
+        }
+    },
+    "curriculum": {
+        "sectionTitle": "Experiences",
+        "experienceTitle": "Experiences",
+        "currentlyOn": "Current",
+        "experiences": {
+            "sectionTitle": "Experiences",
+            "petize": {
+                "role": "Project Lead and Mobile Senior Engineer",
+                "description": "I lead the development of some company projects, both on the web and mobile (Android/iOS), and organize product backlogs. Additionally, I work as a Senior Mobile Developer using Flutter and, when needed, provide support to the team in other areas."
+            },
+            "ifba": {
+                "role": "Technological Initiation Scholarship Holder",
+                "description": "Development and maintenance of Bisnez with Flutter, a social network focused on entrepreneurship available for Android and iOS."
+            },
+            "colégio integral": {
+                "role": "Intern",
+                "description": "I worked on the implementation of the first Qmágico system in Bahia. Additionally, I provided user support, maintained computers, and performed daily database backups."
+            }
+        },
+        "education": {
+            "sectionTitle": "Education",
+            "ifba": {
+                "course": "Technologist in Analysis and Systems Development"
+            },
+            "ufmg": {
+                "course": "Modern Software Engineering Extension"
+            }
+        }
+    },
+    "technologies": {
+        "sectionTitle": "Technologies",
+        "technologyProwess": {
+            "mains": {
+                "title": "Main",
+                "description": "Technologies I use on a daily basis."
+            },
+            "knowns": {
+                "title": "Known",
+                "description": "Technologies I use occasionally."
+            },
+            "familiars": {
+                "title": "Familiar",
+                "description": "Technologies I used some time ago."
+            }
+        }
+    },
+    "contacts": {
+        "sectionBody": "Liked what you saw?\nGet in touch through my social networks."
+    }
+}
