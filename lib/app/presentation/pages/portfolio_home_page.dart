@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 
+import '../../../core/utils/is_mobile_version.dart';
 import '../../domain/constants/section_constants.dart';
 import '../../domain/model/assets_precacher.dart';
 import '../../domain/model/portfolio_sections.dart';
@@ -51,8 +52,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
         children: [
           const AnimatedBackgroundWidget(),
           Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 72,
+            padding: EdgeInsets.symmetric(
+              horizontal: isMobileVersion(context) ? 36 : 72,
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -97,11 +98,11 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                     ),
                     child: const TechnologiesSection(),
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(
-                      bottom: 100,
+                      bottom: isMobileVersion(context) ? 50 : 100,
                     ),
-                    child: ContactsSection(),
+                    child: const ContactsSection(),
                   ),
                 ],
               ),

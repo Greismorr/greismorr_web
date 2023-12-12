@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:greismorr_web/app/modules/contacts/domain/model/contact.dart';
+import 'package:greismorr_web/core/utils/is_mobile_version.dart';
 import 'package:greismorr_web/core/utils/theme/custom_colors.dart';
 import 'package:greismorr_web/core/utils/theme/custom_text_styles.dart';
 import 'package:provider/provider.dart';
@@ -13,6 +14,7 @@ class ContactsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
@@ -22,7 +24,11 @@ class ContactsSection extends StatelessWidget {
                   context,
                   'contacts.sectionBody',
                 ),
-                style: CustomTextStyles.section,
+                style: isMobileVersion(context)
+                    ? CustomTextStyles.section.copyWith(
+                        fontSize: 28,
+                      )
+                    : CustomTextStyles.section,
               ),
             ),
           ],
@@ -31,7 +37,9 @@ class ContactsSection extends StatelessWidget {
           padding: const EdgeInsets.only(
             top: 16,
           ),
-          child: Row(
+          child: Wrap(
+            runSpacing: 16,
+            spacing: 16,
             children: context
                 .read<ContactList>()
                 .contacts
@@ -42,34 +50,30 @@ class ContactsSection extends StatelessWidget {
                         contact.url,
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        right: 16,
-                      ),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                              right: 8,
-                            ),
-                            child: SvgPicture.asset(
-                              contact.iconPath,
-                              width: 24,
-                              height: 24,
-                              colorFilter: const ColorFilter.mode(
-                                CustomColors.gray900,
-                                BlendMode.srcIn,
-                              ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            right: 8,
+                          ),
+                          child: SvgPicture.asset(
+                            contact.iconPath,
+                            width: 24,
+                            height: 24,
+                            colorFilter: const ColorFilter.mode(
+                              CustomColors.gray900,
+                              BlendMode.srcIn,
                             ),
                           ),
-                          Text(
-                            contact.contactMean,
-                            style: CustomTextStyles.body14.copyWith(
-                              color: CustomColors.gray900,
-                            ),
-                          )
-                        ],
-                      ),
+                        ),
+                        Text(
+                          contact.contactMean,
+                          style: CustomTextStyles.body14.copyWith(
+                            color: CustomColors.gray900,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 )
