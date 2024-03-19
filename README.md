@@ -1,6 +1,6 @@
 # greismorr_web
 
-![Prévia do Web App](image.png)
+![Prévia do Web App](preview.png)
 
 ## 📑 Portfólio Dev
 
