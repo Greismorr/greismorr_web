@@ -22,6 +22,9 @@ void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
+  debugProfileBuildsEnabled = true;
+  debugProfileBuildsEnabledUserWidgets = true;
+
   runApp(
     MaterialApp(
       title: appName,
@@ -178,6 +181,11 @@ void main() {
                 Technology(
                   name: 'Flagsmith',
                   asset: 'assets/images/technologies/flagsmith.png',
+                  prowess: TechnologyProwess.mains,
+                ),
+                Technology(
+                  name: 'GitHub Actions',
+                  asset: 'assets/images/technologies/github_actions.png',
                   prowess: TechnologyProwess.mains,
                 ),
                 Technology(

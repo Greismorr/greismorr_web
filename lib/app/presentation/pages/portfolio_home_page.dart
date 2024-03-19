@@ -27,6 +27,54 @@ class PortfolioHomePage extends StatefulWidget {
 
 class _PortfolioHomePageState extends State<PortfolioHomePage> {
   late final portfolioSections = context.read<PortfolioSections>();
+  late final portfolioSectionsWidgets = [
+    AboutSection(
+      key: portfolioSections
+          .sectionByKey(
+            SectionConstants.about,
+          )
+          .navigatorKey,
+    ),
+    Padding(
+      key: portfolioSections
+          .sectionByKey(
+            SectionConstants.projects,
+          )
+          .navigatorKey,
+      padding: EdgeInsets.only(
+        bottom: isMobileVersion(context) ? 100 : 200,
+      ),
+      child: const ProjectsSection(),
+    ),
+    Padding(
+      key: portfolioSections
+          .sectionByKey(
+            SectionConstants.curriculum,
+          )
+          .navigatorKey,
+      padding: EdgeInsets.only(
+        bottom: isMobileVersion(context) ? 100 : 200,
+      ),
+      child: const CurriculumSection(),
+    ),
+    Padding(
+      key: portfolioSections
+          .sectionByKey(
+            SectionConstants.technologies,
+          )
+          .navigatorKey,
+      padding: EdgeInsets.only(
+        bottom: isMobileVersion(context) ? 50 : 150,
+      ),
+      child: const TechnologiesSection(),
+    ),
+    Padding(
+      padding: EdgeInsets.only(
+        bottom: isMobileVersion(context) ? 50 : 100,
+      ),
+      child: const ContactsSection(),
+    ),
+  ];
 
   @override
   void didChangeDependencies() {
@@ -59,57 +107,11 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
             padding: EdgeInsets.symmetric(
               horizontal: isMobileVersion(context) ? 36 : 72,
             ),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  AboutSection(
-                    key: portfolioSections
-                        .sectionByKey(
-                          SectionConstants.about,
-                        )
-                        .navigatorKey,
-                  ),
-                  Padding(
-                    key: portfolioSections
-                        .sectionByKey(
-                          SectionConstants.projects,
-                        )
-                        .navigatorKey,
-                    padding: EdgeInsets.only(
-                      bottom: isMobileVersion(context) ? 100 : 200,
-                    ),
-                    child: const ProjectsSection(),
-                  ),
-                  Padding(
-                    key: portfolioSections
-                        .sectionByKey(
-                          SectionConstants.curriculum,
-                        )
-                        .navigatorKey,
-                    padding: EdgeInsets.only(
-                      bottom: isMobileVersion(context) ? 100 : 200,
-                    ),
-                    child: const CurriculumSection(),
-                  ),
-                  Padding(
-                    key: portfolioSections
-                        .sectionByKey(
-                          SectionConstants.technologies,
-                        )
-                        .navigatorKey,
-                    padding: EdgeInsets.only(
-                      bottom: isMobileVersion(context) ? 50 : 150,
-                    ),
-                    child: const TechnologiesSection(),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      bottom: isMobileVersion(context) ? 50 : 100,
-                    ),
-                    child: const ContactsSection(),
-                  ),
-                ],
-              ),
+            child: ListView.builder(
+              itemCount: portfolioSectionsWidgets.length,
+              itemBuilder: (BuildContext context, int index) {
+                return portfolioSectionsWidgets[index];
+              },
             ),
           ),
         ],
