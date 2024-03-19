@@ -21,7 +21,7 @@ jobs:
         run: flutter build web --release --web-renderer canvaskit --base-href=/greismorr_web/
 
       - name: Upload Web Build Files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: web-release
           path: ./build/web
