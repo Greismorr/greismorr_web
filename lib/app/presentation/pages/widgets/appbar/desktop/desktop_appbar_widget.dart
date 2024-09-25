@@ -51,6 +51,11 @@ class _DesktopAppbarWidgetState extends State<DesktopAppbarWidget> {
                   .map(
                     (section) => TextButton(
                       onPressed: () {
+                        print(section.name);
+                        print(section.navigatorKey.currentContext);
+                        print(section.navigatorKey.currentWidget);
+                        print(section.navigatorKey.currentState);
+
                         Scrollable.ensureVisible(
                           section.navigatorKey.currentContext!,
                           duration: const Duration(

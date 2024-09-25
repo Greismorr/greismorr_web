@@ -8,7 +8,7 @@ import '../../domain/constants/section_constants.dart';
 import '../../domain/model/assets_precacher.dart';
 import '../../domain/model/portfolio_sections.dart';
 import '../../modules/about/presentation/about_section.dart';
-import '../../modules/about/presentation/widgets/animated_background_widget.dart';
+import '../../modules/about/presentation/widgets/animated_background/animated_background_widget.dart';
 import '../../modules/curriculum/presentation/curriculum_section.dart';
 import '../../modules/projects/presentation/projects_section.dart';
 import '../../modules/contacts/presentation/pages/contacts_section.dart';
@@ -27,7 +27,7 @@ class PortfolioHomePage extends StatefulWidget {
 
 class _PortfolioHomePageState extends State<PortfolioHomePage> {
   late final portfolioSections = context.read<PortfolioSections>();
-  late final portfolioSectionsWidgets = [
+  late final portfolioWidgets = [
     AboutSection(
       key: portfolioSections
           .sectionByKey(
@@ -103,15 +103,12 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
       body: Stack(
         children: [
           const AnimatedBackgroundWidget(),
-          Padding(
+          SingleChildScrollView(
             padding: EdgeInsets.symmetric(
               horizontal: isMobileVersion(context) ? 36 : 72,
             ),
-            child: ListView.builder(
-              itemCount: portfolioSectionsWidgets.length,
-              itemBuilder: (BuildContext context, int index) {
-                return portfolioSectionsWidgets[index];
-              },
+            child: Column(
+              children: portfolioWidgets,
             ),
           ),
         ],

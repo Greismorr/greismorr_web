@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../../../../../../core/utils/theme/custom_text_styles.dart';
 import '../../../../../domain/model/portfolio_sections.dart';
-import '../../../../../modules/about/presentation/widgets/animated_background_widget.dart';
+import '../../../../../modules/about/presentation/widgets/animated_background/animated_background_widget.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});

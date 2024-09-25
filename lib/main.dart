@@ -264,6 +264,11 @@ void main() {
                 'assets/images/mesh_gradient/mesh_gradient_step_2.png',
                 'assets/images/mesh_gradient/mesh_gradient_step_3.png'
               ],
+              mobileMeshGradientAssets: [
+                'assets/images/mesh_gradient/mesh_gradient_mobile_step_1.png',
+                'assets/images/mesh_gradient/mesh_gradient_mobile_step_2.png',
+                'assets/images/mesh_gradient/mesh_gradient_mobile_step_3.png'
+              ],
               projectsAssets: context
                   .read<ProjectDataList>()
                   .projects

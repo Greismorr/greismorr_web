@@ -3,21 +3,23 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../domain/model/assets_precacher.dart';
+import '../../../../../domain/model/assets_precacher.dart';
 
-class AnimatedBackgroundWidget extends StatefulWidget {
-  const AnimatedBackgroundWidget({
+class DesktopAnimatedBackgroundWidget extends StatefulWidget {
+  const DesktopAnimatedBackgroundWidget({
     super.key,
   });
 
   @override
-  State<AnimatedBackgroundWidget> createState() =>
-      _AnimatedBackgroundWidgetState();
+  State<DesktopAnimatedBackgroundWidget> createState() =>
+      _DesktopAnimatedBackgroundWidgetState();
 }
 
-class _AnimatedBackgroundWidgetState extends State<AnimatedBackgroundWidget> {
+class _DesktopAnimatedBackgroundWidgetState
+    extends State<DesktopAnimatedBackgroundWidget> {
   late final ValueNotifier<String> notifier;
   late final List<String> gradientMeshes;
+
   late final Timer periodicTimer;
   int currentIndex = 0;
 

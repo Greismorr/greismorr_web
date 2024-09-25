@@ -7,9 +7,7 @@ class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return isMobileVersion(context)
-        ? const AboutMobileWidget()
-        : const AboutDesktopWidget();
-  }
+  Widget build(BuildContext context) => isMobileVersion(context)
+      ? const AboutMobileWidget()
+      : const AboutDesktopWidget();
 }
