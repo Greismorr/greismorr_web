@@ -50,19 +50,12 @@ class _DesktopAppbarWidgetState extends State<DesktopAppbarWidget> {
                   .sections
                   .map(
                     (section) => TextButton(
-                      onPressed: () {
-                        print(section.name);
-                        print(section.navigatorKey.currentContext);
-                        print(section.navigatorKey.currentWidget);
-                        print(section.navigatorKey.currentState);
-
-                        Scrollable.ensureVisible(
-                          section.navigatorKey.currentContext!,
-                          duration: const Duration(
-                            milliseconds: 600,
-                          ),
-                        );
-                      },
+                      onPressed: () => Scrollable.ensureVisible(
+                        section.navigatorKey.currentContext!,
+                        duration: const Duration(
+                          milliseconds: 600,
+                        ),
+                      ),
                       child: Text(
                         FlutterI18n.translate(
                           context,

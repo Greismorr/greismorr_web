@@ -36,6 +36,15 @@ class ProjectWidget extends StatelessWidget {
             padding: const EdgeInsets.only(
               top: 12,
             ),
+            child: Text(
+              project.name,
+              style: CustomTextStyles.h3,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 12,
+            ),
             child: Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -54,15 +63,6 @@ class ProjectWidget extends StatelessWidget {
                     ),
                   )
                   .toList(),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 12,
-            ),
-            child: Text(
-              project.name,
-              style: CustomTextStyles.h3,
             ),
           ),
           Padding(

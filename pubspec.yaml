@@ -20,6 +20,10 @@ dependencies:
   provider: ^6.1.1
   url_launcher: ^6.2.1
 
+dependency_overrides:
+  archive: ^3.6.1
+  win32: ^5.5.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -30,6 +34,7 @@ flutter_native_splash:
   android: false
   ios: false
   color: "#000000"
+  web_image_mode: center
   image: assets/splash/splash.gif
 
 flutter:

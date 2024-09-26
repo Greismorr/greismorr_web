@@ -78,9 +78,9 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
 
   @override
   void didChangeDependencies() {
-    context.read<AssetsPrecacher>().preCacheAllAssets(context).then(
-          (_) => FlutterNativeSplash.remove(),
-        );
+    //context.read<AssetsPrecacher>().preCacheAllAssets(context).then(
+    // (_) => FlutterNativeSplash.remove(),
+    //);
 
     super.didChangeDependencies();
   }
